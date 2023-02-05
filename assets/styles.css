@@ -1,0 +1,44 @@
+
+body {
+font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.fooText {
+    text-shadow: 2px 2px #FF0000;
+}
+
+.splash {
+    background-image:src=("./img/nadine-primeau--ftWfohtjNw-unsplash.jpg" );
+
+}
+.main-card {
+    margin-top: 7rem;
+}
+
+.card-title {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: #FF0000 4px 4px;
+    padding-top: 50%;
+}
+
+.card-text {
+    text-align: center;
+    text-shadow: 2px 2px #FF0000;
+}
+.overlayBG {
+    margin-top: 50% ;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgba(138, 145, 152, 0.6);
+}
+
+
+
+
+
+
+
