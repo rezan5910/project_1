@@ -1,40 +1,44 @@
 
+
+
+
+
 body {
 font-family: 'Montserrat', sans-serif;
 
 }
 
-
+.navbar-toggler-icon {
+    background-color: aliceblue;
+    color: blue;
+}
 
 .fooText {
+    /*Text shadow to be used on larger font sizes.*/
     text-shadow: 2px 2px #FF0000;
 }
 
-.splash {
-    background-image:src=("./img/nadine-primeau--ftWfohtjNw-unsplash.jpg" );
-
-}
 .main-card {
-    margin-top: 7rem;
+    /* This stops the main image from hiding under thge menu.*/
+    margin-top: 9rem;
 }
 
 .card-title {
-    font-size: 3rem;
+    /* This is the title to sit in front of the main splash*/
+    font-size: 2.5rem;
     text-align: center;
+    /*Text shadow to lift the text off of the image.*/
     text-shadow: #FF0000 4px 4px;
-    padding-top: 50%;
+    /*This padding to pull the text down to the midle of the page*/
+    padding-top: 40%;
 }
 
 .card-text {
     text-align: center;
+    /*Need a separate shadow statement as 4px does not look good on the smaller font sizes.*/
     text-shadow: 2px 2px #FF0000;
 }
-.overlayBG {
-    margin-top: 50% ;
-    height: 100px;
-    border-radius: 10px;
-    background-color: rgba(138, 145, 152, 0.6);
-}
+
 
 
 
