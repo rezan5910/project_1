@@ -8,6 +8,10 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
+.navbar {
+    background-color: aliceblue;
+}
+
 .navbar-toggler-icon {
     background-color: aliceblue;
     color: blue;
@@ -15,7 +19,9 @@ font-family: 'Montserrat', sans-serif;
 
 .fooText {
     /*Text shadow to be used on larger font sizes.*/
-    text-shadow: 2px 2px #FF0000;
+    text-shadow: 1px 1px #7f7272;
+    text-align: center;
+    font-weight: bold;
 }
 
 .main-card {
@@ -28,16 +34,20 @@ font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     text-align: center;
     /*Text shadow to lift the text off of the image.*/
-    text-shadow: #FF0000 4px 4px;
+    text-shadow: #6c6767 4px 4px;
     /*This padding to pull the text down to the midle of the page*/
     padding-top: 40%;
 }
 
-.card-text {
-    text-align: center;
-    /*Need a separate shadow statement as 4px does not look good on the smaller font sizes.*/
-    text-shadow: 2px 2px #FF0000;
+.btn btn-primary {
+
+    margin: 0 auto 0 auto;
 }
+.card-title1 {
+    text-align: center;
+}
+
+
 
 
 
