@@ -87,3 +87,4 @@ function saveAsFavorite(index) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 }
+

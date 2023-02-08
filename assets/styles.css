@@ -1,0 +1,64 @@
+
+
+
+
+
+body {
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.navbar {
+    background-color: aliceblue;
+}
+
+.navbar-toggler-icon {
+    background-color: aliceblue;
+    color: blue;
+}
+
+.fooText {
+    /*Text shadow to be used on larger font sizes.*/
+    text-shadow: 1px 1px #7f7272;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-card {
+    /* This stops the main image from hiding under thge menu.*/
+    margin-top: 9rem;
+}
+
+.card-title {
+    /* This is the title to sit in front of the main splash*/
+    font-size: 2.5rem;
+    text-align: center;
+    /*Text shadow to lift the text off of the image.*/
+    text-shadow: #6c6767 4px 4px;
+    /*This padding to pull the text down to the midle of the page*/
+    padding-top: 40%;
+}
+
+.btn btn-primary {
+
+    margin: 0 auto 0 auto;
+}
+.card-title1 {
+    text-align: center;
+}
+
+.menuImg2 {
+    width: 50%;
+    height: 10em;
+    background-color: rgb(194, 200, 183);
+    
+}
+
+
+
+
+
+
+
+
+
