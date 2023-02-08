@@ -47,7 +47,12 @@ font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
-
+.menuImg2 {
+    width: 50%;
+    height: 10em;
+    background-color: rgb(194, 200, 183);
+    
+}
 
 
 
