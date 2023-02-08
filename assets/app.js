@@ -75,7 +75,29 @@ function renderRecipes() {
              </div>
          </div>        
     `;
-        
+        let modalDiv = document.createElement("div");
+        modalDiv.setAttribute("class", "modal fade");
+        modalDiv.id = `Modal${i}`;
+        modalDiv.tabIndex = -1;
+        modalDiv.innerHTML = `    
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >${title}</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ... i need to put the recipe here/instruction
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+`
         recipeDiv.appendChild(modalDiv)
 
 
