@@ -16,8 +16,8 @@ document.body.appendChild(getMyFaves);
 /**
  * still to learn how to store this in an .env and not on github
  */
-const app_id = "ae5725d8";
-const app_key = "012bf6f9faddd0a7847767f3d2801c2e";
+const app_id = "efb4a3cd";
+const app_key = "d1bf4e15afdc6c0aeb9b41a706404e1c";
 const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&app_id=${app_id}&app_key=${app_key}`;
 
 
@@ -76,22 +76,22 @@ function renderRecipes() {
         const link = recipe.url;
         const image = recipe.image;
 
-        const recipeDiv = document.createElement("div");
-        recipeDiv.setAttribute('class', 'card mb-3')
+  
+          const recipeDiv = document.createElement("div");
+        recipeDiv.setAttribute('class', 'card col-5 mb-3')
+   
         recipeDiv.innerHTML = `
-        <div class="row g-0">
-            <div class="col-md-4">
-                 <img src="${image}" class="img-fluid rounded-start" alt="${title}">
-            </div>
-             <div class="col-md-8">
-                    <div class="card-body">
-                         <h2 class="card-title">${title}</h2>
-                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal${i}">View Recipe</button>
-                         <button class="favorite-btn" data-index="${i}">Save as Favorite</button>
+              <div class="card my-3 col-10 shadow border-0">
+                 <img src="${image}" class="img-fluid rounded-start" alt="${title}">            
+              <div class="card-body">
+                   <h2 class="card-title">${title}</h2>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal${i}">View Recipe</button>
+                   <button class="favorite-btn" data-index="${i}">Save as Favorite</button>
+              </div>
 
-                     </div>
-             </div>
-         </div>
+
+        
+         
     `;
         let modalDiv = document.createElement("div");
         modalDiv.setAttribute("class", "modal fade");
@@ -119,8 +119,8 @@ function renderRecipes() {
         recipeDiv.appendChild(modalDiv)
 
 
-
         resultsDiv.appendChild(recipeDiv);
+       
     }
     //adding event listener to the fave button to save the rcipe
     const favoriteBtns = document.querySelectorAll(".favorite-btn");

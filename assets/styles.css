@@ -29,8 +29,13 @@ font-family: 'Montserrat', sans-serif;
     /*Text shadow to lift the text off of the image.*/
     text-shadow: #6c6767 2px 2px;
     /*This padding to pull the text down to the midle of the page*/
-    padding-top: 40%;
+    /* padding-top: 40%; */
 }
+#results{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .btn btn-primary {
 
@@ -65,7 +70,33 @@ font-family: 'Montserrat', sans-serif;
     height: 100%;
 }
 
+.card.col-5.mb-3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
 
+.card.my-3.col-10.shadow.border-0 {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
 
 img {
     max-width: 100%;
