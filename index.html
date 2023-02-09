@@ -18,18 +18,21 @@
 </head>
 <body>
    
-<!--Navbar section-->
-<!--Use the search to search for ingredients-->
-<!--Issue:  Will need multiple inputs.-->
-<main>
-  <!-- search input section -->
-  <form id="search-form">
-      <label for="search-input">Search:</label>
-      <input id="search-input" type="text" name="q">
-      <button type="submit">Submit</button>
-    </form>
-    <div id="results" class="container">
 
+<!--Use the search to search for ingredients-->
+
+      <main>
+
+        <!-- search input section -->
+        <div class="container">
+          <h1 class="fooText">FOOnDER</h1>
+        <form id="search-form">
+            <label for="search-input">Search:</label>
+            <input id="search-input" type="text" name="q" placeholder="enter your food choices">
+            <button class="input-button  col-3 mx-auto mt-3" type="submit">Submit</button>
+          </form>
+          <div id="results">
+          </div>
 
     </div>
 </main>
@@ -40,7 +43,7 @@
     <img src="./assets/img/nadine-primeau--ftWfohtjNw-unsplash.jpg" class="card-img" alt="...">
     <div class="card-img-overlay">
         
-        <h1 class="card-title">FOOnDER</h1>
+        <h1 class="card-title ">FOOnDER</h1>
         <p class="card-text fooText">A dating app for the indecisive foodie, keeping it healthy. <br>
             “A healthy mind in a healthy body”
             </p>
@@ -52,38 +55,40 @@
       </div>
   </div>
 </div>
-<!--Recipe card-->
-<div class="container-fluid">
 
-  <div class="menuImg2">
-  <!-- <img src="..." class="img-thumbnail" alt="..."> -->
-</div>
-<div class="asside">
-  <ul >
-
-  </ul>
-</div>
-
-<div class="flex-row">
-  <div class="d-flex flex-row mb-3 flex-wrap">
-   
-    <div class="p-2" id="kcal">kcal</div>
-    <div class="p-2" id="fat">fat</div>
-    <div class="p-2" id="saturates">saturates</div>
-    <div class="p-2" id="carbs">carbs</div>
-
-    <div class="p-2" id="sugars">sugars</div>
-    <div class="p-2" id="fibre">fibre</div>
-    <div class="p-2" id="protein">protein</div>
-    <div class="p-2" id="salt">salt</div>
-  
-  </div>
 </div>
 </div>
 
 
 
+
+
+    <!--random recipe-->
+    <!----------------->
+
+
+    <div class="container">
+      <div class="row text-center">
+        <h3>
+          Feeling Hungry
+        </h3>
+        <h5>
+          Get a random Meal by clicking the button below.
+        </h5>
+        <button class="btn btn-primary col-6 mx-auto" id="get_meal">
+          Get meal 
+        </button>
+        
+      </div>
+      <div id="meal" class="row meal"></div>
     </div>
+
+
+
+
+
+
+
     <!--Bootstrap code-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!--Link to js file-->

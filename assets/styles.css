@@ -8,25 +8,18 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
-.navbar {
-    background-color: aliceblue;
-}
 
-.navbar-toggler-icon {
-    background-color: aliceblue;
-    color: blue;
-}
+
 
 .fooText {
     /*Text shadow to be used on larger font sizes.*/
     text-shadow: 1px 1px #7f7272;
     text-align: center;
     font-weight: bold;
+    margin-top: 3rem;
 }
-
-.main-card {
-    /* This stops the main image from hiding under thge menu.*/
-    margin-top: 9rem;
+.input-button {
+    background-color: burlywood;
 }
 
 .card-title {
@@ -34,7 +27,7 @@ font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     text-align: center;
     /*Text shadow to lift the text off of the image.*/
-    text-shadow: #6c6767 4px 4px;
+    text-shadow: #6c6767 2px 2px;
     /*This padding to pull the text down to the midle of the page*/
     padding-top: 40%;
 }
@@ -54,11 +47,51 @@ font-family: 'Montserrat', sans-serif;
     
 }
 
+/*CSS  for the random meals*/
+
+/*Adjust Video size and position*/
+.videoWrapper {
+    position:relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 
+img {
+    max-width: 100%;
+}
 
+p {
+    margin-bottom: 5px;
+}
 
+h3 {
+    margin: 0;
+}
 
+h5 {
+    margin:10px 0;
+}
 
+li{
+    margin-bottom: 0;
+}
+
+.meal {
+    margin: 20px 0;
+}
+
+.text-center {
+    text-align: center;
+}
 
