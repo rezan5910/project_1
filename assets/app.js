@@ -141,7 +141,7 @@ function createMeal(meal){
 
     mealContainer.innerHTML = `
     <div class="row">
-        <div class="columns five">
+        <div class="col-5">
             <img src="${meal.strMealThumb}" alt="Meal Image" />
             <p><strong>Category: </strong>${meal.strCategory}</p>
             <p><strong>Area: </strong>${meal.strArea}</p>
@@ -153,7 +153,7 @@ function createMeal(meal){
                 `).join('')}
             </ul>
         </div>
-        <div class="columns seven">
+        <div class="col-7">
         <h4>${meal.strMeal}</h4>
         <p>${meal.strInstructions}</p>
     </div>
