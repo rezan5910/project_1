@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+
+## Title
+
+FOOnDER
+
+## Description
+
+
+
+Bored of eating the same food? Need something inspirational, delicious and healthy for the family or your date night? Then checkout this new App, it will make your life easy! This app provide a one-stop-shop for food inspiration in the kitchen, with a focus on healthy and nutritious meal options. Search for your recipes based on ingredients, cuisine, meal type, and dietary restrictions, and you will be presented with information on the nutritional value of each recipe and also step by step guides on how to cook it.
+
+
+## Features
+
+Recipes List
+Categories
+Ingredients
+Recipes Details Screen
+Photo Gallery
+Detailed Description
+Ingredients button
+Ingredients List
+Recipes by Ingredient
+Search
+Navigation Bar
+List of recipe categories
+Search recipes from the network
+Infinite scroll with pagination
+Save your favorite recipes in a local database
+Navigation with deep linking
+light and dark theme 
+
+## technologies
+
+HTML
+CSS
+Javascript
+https://developer.edamam.com/food-database-api-docs
+
+https://www.themealdb.com/api/json/v1/1/random.php
+
+## Screen shot
+
+
+
+
+## link
+
+
+=======
 ## FOODNER
 
 - [Overview](#overview)
@@ -107,3 +158,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+>>>>>>> a4ae2e0ab0a87501aa4e97a16ff63bebedf39359
