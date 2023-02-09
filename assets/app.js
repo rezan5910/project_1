@@ -2,6 +2,7 @@
 const form = document.getElementById("search-form");
 const resultsDiv = document.getElementById("results");
 const allRecipes = [];
+
 // favorites array declared globally
 let favorites = [];
 // //favorites button which gets the values stored in local storage
@@ -19,6 +20,7 @@ const app_id = "ae5725d8";
 const app_key = "012bf6f9faddd0a7847767f3d2801c2e";
 const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&app_id=${app_id}&app_key=${app_key}`;
 
+
 // evListener for form submit
 form.addEventListener("submit", (event) => {
   // prevent the default behaviour
@@ -30,6 +32,7 @@ form.addEventListener("submit", (event) => {
   //   calling the render function with the relevant query passed as argument
   searchRecipes(query);
 });
+
 // function to search the recipes using the query data fromt he form
 function searchRecipes(query) {
   // building a search url based on the api url pramaters
@@ -49,6 +52,11 @@ function searchRecipes(query) {
     //   event.target.elements.q.value = "";
     });
 }
+
+function renderRecipes() {
+
+
+}
 // render function rendering the information to the cards
 function renderRecipes() {
   // if the rsult div isnt available creating one
@@ -60,33 +68,68 @@ function renderRecipes() {
   //   clearing the results div before rending the new search
   resultsDiv.innerHTML = "";
   // looping through all the recipes array and render each recipe as card
-  for (let i = 0; i < allRecipes.length; i++) {
-    const recipe = allRecipes[i];
-    const title = recipe.label;
-    const link = recipe.url;
-    const image = recipe.image;
-    const ingr = recipe.ingredients.keys();
-    // const calorie = recipe.calories
+    // looping through all the recipes array and render each recipe as card
+    for (let i = 0; i < allRecipes.length; i++) {
+        const recipe = allRecipes[i];
+        console.log(recipe)
+        const title = recipe.label;
+        const link = recipe.url;
+        const image = recipe.image;
 
-    const recipeDiv = document.createElement("div");
-    recipeDiv.innerHTML = `
-        <h2>${title}</h2>
-        <img src="${image}" alt="${title}">
-        <a href="${link}" target="_blank">View Recipe</a>
-        <p>${ingr}</p>
-        <button class="save-btn" data-index="${i}">Save </button>
+        const recipeDiv = document.createElement("div");
+        recipeDiv.setAttribute('class', 'card mb-3')
+        recipeDiv.innerHTML = `
+        <div class="row g-0">
+            <div class="col-md-4">
+                 <img src="${image}" class="img-fluid rounded-start" alt="${title}">
+            </div>
+             <div class="col-md-8">
+                    <div class="card-body">
+                         <h2 class="card-title">${title}</h2>
+                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal${i}">View Recipe</button>
+                         <button class="favorite-btn" data-index="${i}">Save as Favorite</button>
+
+                     </div>
+             </div>
+         </div>
     `;
+        let modalDiv = document.createElement("div");
+        modalDiv.setAttribute("class", "modal fade");
+        modalDiv.id = `Modal${i}`;
+        modalDiv.tabIndex = -1;
+        modalDiv.innerHTML = `
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >${title}</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ... i need to put the recipe here/instruction
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+`
+        recipeDiv.appendChild(modalDiv)
 
-    resultsDiv.appendChild(recipeDiv);
-  }
-  //adding event listener to the fave button to save the rcipe
-  const saveBtns = document.querySelectorAll(".save-btn");
-  saveBtns.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      const index = event.target.dataset.index;
-      saveAsFavorite(index);
+
+
+        resultsDiv.appendChild(recipeDiv);
+    }
+    //adding event listener to the fave button to save the rcipe
+    const favoriteBtns = document.querySelectorAll(".favorite-btn");
+    favoriteBtns.forEach(btn => {
+        btn.addEventListener("click", event => {
+            const index = event.target.dataset.index;
+            saveAsFavorite(index);
+        });
     });
-  });
 }
 
 // event listner to listen on getmyfaves btn
@@ -98,7 +141,6 @@ getMyFaves.addEventListener('click',()=>{
     renderRecipes();
 });
 
-
 function saveAsFavorite(index) {
   const recipe = allRecipes[index];
   if (!localStorage.getItem("favorites")) {
@@ -109,4 +151,5 @@ function saveAsFavorite(index) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 }
+
 
