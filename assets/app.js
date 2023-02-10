@@ -167,6 +167,8 @@ getMealBtn.addEventListener('click', () => {
     })
 });
 
+
+
 function createMeal(meal){
     const ingredients = [];
     for(i=1; i<=20; i++) {
@@ -181,6 +183,7 @@ function createMeal(meal){
     }
 
 
+  
     mealContainer.innerHTML = `
     <div class="row">
         <div class="col-5">
@@ -207,3 +210,4 @@ function createMeal(meal){
     </div>
     `;
 }
+
