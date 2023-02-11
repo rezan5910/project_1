@@ -79,19 +79,13 @@ function renderRecipes() {
         const recipeDiv = document.createElement("div");
         recipeDiv.setAttribute('class', 'card mb-3')
         recipeDiv.innerHTML = `
-        <div class="row g-0">
-            <div class="col-md-4">
-                 <img src="${image}" class="img-fluid rounded-start" alt="${title}">
-            </div>
-             <div class="col-md-8">
-                    <div class="card-body">
-                         <h2 class="card-title">${title}</h2>
-                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal${i}">View Recipe</button>
-                         <button class="favorite-btn" data-index="${i}">Save as Favorite</button>
-
-                     </div>
-             </div>
-         </div>
+        <div class="card my-3 col-10 shadow border-0">
+                 <img src="${image}" class="img-fluid rounded-start" alt="${title}">            
+              <div class="card-body">
+                   <h2 class="card-title">${title}</h2>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal${i}">View Recipe</button>
+                   <button class="favorite-btn" data-index="${i}">Save as Favorite</button>
+              </div>
     `;
         let modalDiv = document.createElement("div");
         modalDiv.setAttribute("class", "modal fade");

@@ -27,7 +27,7 @@ font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     text-align: center;
     /*Text shadow to lift the text off of the image.*/
-    text-shadow: #6c6767 2px 2px;
+    /* text-shadow: #6c6767 2px 2px; */
     /*This padding to pull the text down to the midle of the page*/
     padding-top: 40%;
 }
